@@ -1,0 +1,17 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+.menu{
+   background-color: rgba(0, 0, 0, 0.329);
+}
+img{
+   display: inline-block;
+}
+ul{
+   vertical-align: top;
+   display: inline-block;
+}
+li{
+   display: inline-block;
+}

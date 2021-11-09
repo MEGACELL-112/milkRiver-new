@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cheese.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+        <ul class="menu">
+            <div class="container2">
+                <li><a href="" class="current">Главная</a></li>
+                <li><a href="aboutCompany.html">О компании</a></li>
+                <li><a href="">Потребителям</a></li>
+                <li><a href="products.html">Продукция</a></li>
+                <li><a href="">Фирменная и торговая сеть</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </div>
+        </ul>
+        <main>
+            <div class="container">
+        <h6>Сыр "Кайф"</h6>
+                <div class="slideshow">
+                    <img src="product (1).jpg" alt="" class="active">
+                    <img src="сыр.jpg" alt="">
+                    <img src="сыр (1).jpg" alt="">
+                    <img src="сыр (2).jpg" alt="">
+                    <img src="сыр (3).jpg" alt="">
+                </div>
+                <div class="price">
+                    <h5>190Р
+                        <span>/500г</span>
+                    </h5>
+                    <a href="">В корзину</a>
+                    <input type="checkbox" id="heartCheck">
+                    <label for="heartCheck">
+                        <img src="heart2.svg" alt="">
+                        <img src="colored heart.svg" alt="">
+                    </label>
+                </div>
+            </div>
+        </main>
+        <script>
+            let interval = setInterval(function(){
+                // console .log(7);
+                let activeImg = document.getElementsByClassName("active")[0]
+                activeImg.classList.remove("active")
+                let nextImg = activeImg.nextElementSibling;
+                if (activeImg.nextElementSibling){
+                    console.log(7)
+                    nextImg = activeImg.nextElementSibling;
+                }
+                else{
+                    nextImg = document.getElementsByClassName("slideshow")[0].children[0]
+                }
+                setTimeout(function(){
+                nextImg.classList.add("active")
+                },150)
+            },1500)
+        </script>
+</body>
+</html>
